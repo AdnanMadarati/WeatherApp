@@ -1,0 +1,33 @@
+.searchbar {
+    width: 35vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: solid black 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.input {
+    border: 0;
+    width: 30vw;
+    height: 5vh;
+    padding: 0;
+    background-color: transparent;
+	border: none;
+	border-radius: 0;
+	outline: none;
+    font-size: 20px;
+}
+
+.button {
+    background-color: transparent;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
