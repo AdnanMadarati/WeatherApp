@@ -39,7 +39,7 @@ export default function Hero() {
   async function getWeather(city: string) {
     setLoading(true);
     const weatherResponse = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_FORCAST_KEY}&q=${city}&days=3&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=${process.env.NEXT_PUBLIC_FORCAST_KEY}&q=${city}&days=3&aqi=no&alerts=no`
     );
     const weatherData = await weatherResponse.json();
     setWeather(weatherData);
