@@ -10,7 +10,7 @@
 
 .cardTop {
     width: 100%;
-    height: 40vh;
+    height: 37vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -41,16 +41,40 @@
 }
 
 .leftInfo img {
-    margin-left: -10px;
+    margin: 10px 0px 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+    border-radius: 10px;
+} 
+
+.rightInfo {
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 1em;
 }
 
 .cardButtom {
     width: 100%;
     height: 37vh;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+}
+
+.forcast {
+    width: 20%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.forcastCard {
+    width: 100%;
+    height: 85%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .mainCard hr {

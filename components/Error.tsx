@@ -1,8 +1,8 @@
-import { IForcast } from "@/pages"
+import { IWeather } from "@/pages"
 import styles from "./Error.module.css"
 
 interface Props {
-    data: IForcast
+    data: IWeather
 }
 
 export const Error = ({data} : Props) => {
