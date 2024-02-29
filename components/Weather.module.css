@@ -137,8 +137,12 @@
         height: 65vh;
     }
 
+    .leftInfo {
+        width: 45%;
+    }
+
     .cardTop p:first-child {
-        font-size: 65px;
+        font-size: 50px;
     }
 
     .cardButtom {

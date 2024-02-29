@@ -99,6 +99,7 @@ export const Weather = ({ weatherData, forcastData, handler }: Props) => {
       </div>
       <button className={styles.button} onClick={handleRemoveWeather}>
         <FontAwesomeIcon icon={faAngleLeft} size="2x" />
+        <p>Back</p>
       </button>
     </>
   );
