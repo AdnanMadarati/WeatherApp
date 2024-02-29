@@ -31,3 +31,9 @@
 .button:hover {
     cursor: pointer;
 }
+
+@media (max-width: 500px) {
+    .searchbar {
+        width: 45vw;
+    }
+}
