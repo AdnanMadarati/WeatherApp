@@ -1,37 +1,29 @@
-import { useState } from "react";
-import styles from "./Searchbar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { useState } from 'react';
+import styles from './Searchbar.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useWeather } from '@/Hooks';
 
-interface Props {
-  handler: Function;
-}
+export const Searchbar = () => {
+  const { getWeather } = useWeather();
+  const [city, setCity] = useState('');
 
-export const Searchbar = ({ handler }: Props) => {
-  const [city, setCity] = useState("");
-
-  function getWeatherHandler() {
-    handler(city);
-  }
-
-  function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
-    if (event.key === "Enter") {
-      getWeatherHandler();
-    }
+  function handleKeyDown() {
+    getWeather(city);
   }
 
   return (
     <div className={styles.searchbar}>
       <input
         className={styles.input}
-        type="text"
-        placeholder="Your City..."
+        type='text'
+        placeholder='Your City...'
         value={city}
-        onChange={(e) => setCity(e.currentTarget.value)}
-        onKeyDown={handleKeyDown} // Changed to onKeyDown
+        onChange={(e) => setCity(e.target.value)}
+        onKeyDown={(e) => e.key === 'Enter' && getWeather(city)}
       />
-      <button onClick={getWeatherHandler} className={styles.button}>
-        <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" />
+      <button onClick={handleKeyDown} className={styles.button}>
+        <FontAwesomeIcon icon={faMagnifyingGlass} size='2x' />
       </button>
     </div>
   );
