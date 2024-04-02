@@ -2,16 +2,21 @@ import { useState } from "react";
 import styles from "./Searchbar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { getWeather } from "@/Hooks";
 
-let cityToPass: string;
+interface Props {
+  handler: Function;
+}
 
-export const Searchbar = () => {
+export const Searchbar = ({ handler }: Props) => {
   const [city, setCity] = useState("");
+
+  function getWeatherHandler() {
+    handler(city);
+  }
 
   function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key === "Enter") {
-      getWeather();
+      getWeatherHandler();
     }
   }
 
@@ -22,19 +27,12 @@ export const Searchbar = () => {
         type="text"
         placeholder="Your City..."
         value={city}
-        onChange={(e) => {
-          setCity(e.currentTarget.value);
-          cityToPass = e.currentTarget.value;
-        }}
-        onKeyDown={handleKeyDown}
+        onChange={(e) => setCity(e.currentTarget.value)}
+        onKeyDown={handleKeyDown} // Changed to onKeyDown
       />
-      <button onClick={getWeather} className={styles.button}>
+      <button onClick={getWeatherHandler} className={styles.button}>
         <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" />
       </button>
     </div>
   );
 };
-
-export function getCity() {
-  return cityToPass;
-}
