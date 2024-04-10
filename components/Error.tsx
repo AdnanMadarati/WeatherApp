@@ -1,4 +1,4 @@
-import { IWeather } from "@/pages"
+import { IWeather } from "../types"
 import styles from "./Error.module.css"
 
 interface Props {

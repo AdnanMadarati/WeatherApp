@@ -4,20 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
-  handler: Function;
+    handler: Function;
 }
 
-export const Searchbar = ({ handler }: Props) => {
+export const Searchbar = ({handler} : Props) => {
   const [city, setCity] = useState("");
 
   function getWeatherHandler() {
-    handler(city);
-  }
-
-  function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
-    if (event.key === "Enter") {
-      getWeatherHandler();
-    }
+    handler(city)
   }
 
   return (
@@ -28,11 +22,12 @@ export const Searchbar = ({ handler }: Props) => {
         placeholder="Your City..."
         value={city}
         onChange={(e) => setCity(e.currentTarget.value)}
-        onKeyDown={handleKeyDown} // Changed to onKeyDown
+        onKeyDown={(e) => e.key === 'Enter' && getWeatherHandler()}
       />
       <button onClick={getWeatherHandler} className={styles.button}>
         <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" />
       </button>
+    
     </div>
   );
 };
