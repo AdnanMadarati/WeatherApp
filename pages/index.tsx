@@ -35,9 +35,9 @@ export default function Homepage() {
   return (
     <>
       <div className={styles.main}>
-        {!weather?.current && <Searchbar handler={getWeather} />}
+        {!weather?.current && <Searchbar getWeather={getWeather} />}
         {weather && forecast && (
-          <Weather weather={weather} forecasts={forecast} handler={removeWeather} />
+          <Weather weather={weather} forecasts={forecast} removeWeather={removeWeather} />
         )}
       </div>
       {weather?.error && (

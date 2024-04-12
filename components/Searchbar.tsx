@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
-    handler: Function;
+  getWeather: Function;
 }
 
-export const Searchbar = ({handler} : Props) => {
+export const Searchbar = ({getWeather} : Props) => {
   const [city, setCity] = useState("");
 
   function getWeatherHandler() {
-    handler(city)
+    getWeather(city)
   }
 
   return (

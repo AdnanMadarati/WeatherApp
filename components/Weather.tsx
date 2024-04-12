@@ -8,15 +8,13 @@ import { format, parseISO } from "date-fns";
 interface Props {
   weather: IWeather;
   forecasts: Array<IForecast>;
-  handler: Function;
+  removeWeather: Function;
 }
 
-export const Weather = ({ weather, forecasts, handler }: Props) => {
-  function handleRemoveWeather() {
-    handler();
+export const Weather = ({ weather, forecasts, removeWeather }: Props) => {
+  function removeWeatherHandler() {
+    removeWeather();
   }
-
-  if (!Array.isArray(forecasts)) return null;
 
   return (
     <>
@@ -58,7 +56,7 @@ export const Weather = ({ weather, forecasts, handler }: Props) => {
           ))}
         </div>
       </div>
-      <button className={styles.button} onClick={handleRemoveWeather}>
+      <button className={styles.button} onClick={removeWeatherHandler}>
         <FontAwesomeIcon icon={faAngleLeft} size="2x" /> <h3>Back</h3>
       </button>
     </>
