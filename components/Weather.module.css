@@ -97,13 +97,14 @@
     cursor: pointer;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 0px) and (max-width: 280px) {
     .mainCard {
-        font-size: 15px;
+        width: 85vw;
+        height: 70vh;
+        font-size: 12px;
     }
-
     .cardTop p:first-child {
-        font-size: 70px;
+        font-size: 30px;
     }
     
     .leftInfo h3 {
@@ -111,30 +112,160 @@
     }
     
     .leftInfo h4 {
-        font-size: 20px;
+        font-size: 15px;
     }
-
-    .leftInfo img {
-        width: 70px;
-        height: 70px;
-    } 
-    
     .rightInfo {
-        box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
-        border-radius: 10px;
-        padding: 1em;
+        margin-top: 8vh;
     }
-
+    .forecastCard {
+        height: 80%;
+    }
     .forecast {
-        height: 55%;
+        height: 40%;
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 290px) and (max-width: 375px) {
     .mainCard {
-        width: 65vw;
+        width: 80vw;
+        height: 70vh;
+        font-size: 14px;
+    }
+    .cardTop p:first-child {
+        font-size: 40px;
+    }
+    
+    .leftInfo h3 {
+        font-size: 30px;
+    }
+    
+    .leftInfo h4 {
+        font-size: 15px;
+    }
+    .rightInfo {
+        margin-top: 5vh;
+    }
+    .forecastCard {
+        height: 80%;
     }
     .forecast {
         height: 50%;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 430px) {
+    .mainCard {
+        width: 84vw;
+        height: 70vh;
+        font-size: 14px;
+    }
+    .cardTop p:first-child {
+        font-size: 40px;
+    }
+    
+    .leftInfo h3 {
+        font-size: 30px;
+    }
+    
+    .leftInfo h4 {
+        font-size: 15px;
+    }
+    .rightInfo {
+        margin-top: 4vh;
+    }
+    .forecastCard {
+        height: 80%;
+    }
+    .forecast {
+        height: 50%;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 540px) {
+    .mainCard {
+        width: 84vw;
+        height: 70vh;
+        font-size: 20px;
+    }
+    .cardTop p:first-child {
+        font-size: 50px;
+    }
+    
+    .leftInfo h3 {
+        font-size: 40px;
+    }
+    
+    .leftInfo h4 {
+        font-size: 20px;
+    }
+    .rightInfo {
+        margin-top: 4vh;
+    }
+    .forecastCard {
+        height: 80%;
+    }
+    .forecast {
+        height: 65%;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 1024px) {
+    .mainCard {
+        width: 84vw;
+        height: 70vh;
+        font-size: 30px;
+    }
+    .cardTop p:first-child {
+        font-size: 60px;
+    }
+    
+    .leftInfo h3 {
+        font-size: 50px;
+    }
+    
+    .leftInfo h4 {
+        font-size: 25px;
+    }
+    .rightInfo {
+        margin-top: 4vh;
+    }
+    .forecastCard {
+        height: 80%;
+    }
+    .forecast {
+        height: 65%;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 1024px) and (height: 600px) {
+    .mainCard {
+        width: 84vw;
+        height: 75vh;
+        font-size: 20px;
+    }
+    .cardTop p:first-child {
+        font-size: 50px;
+    }
+    
+    .leftInfo h3 {
+        font-size: 40px;
+    }
+    
+    .leftInfo h4 {
+        font-size: 20px;
+    }
+    .rightInfo {
+        margin-top: 4vh;
+    }
+    .forecastCard {
+        height: 85%;
+        justify-content: center;
+        align-items: center;
+    }
+    .forecastCard img {
+        width: 100px;
+    }
+    .forecast {
+        height: 75%;
     }
 }

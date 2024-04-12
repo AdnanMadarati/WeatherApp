@@ -31,3 +31,39 @@
 .button:hover {
     cursor: pointer;
 }
+
+@media (min-width: 0px) and (max-width: 280px) {
+    .searchbar {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 290px) and (max-width: 375px) {
+    .searchbar {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 430px) {
+    .searchbar {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 540px) {
+    .searchbar {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 1024px) {
+    .searchbar {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 1024px) and (height: 600px) {
+    .searchbar {
+        width: 50vw;
+    }
+}
