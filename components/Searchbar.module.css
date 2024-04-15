@@ -1,6 +1,6 @@
 .searchbar {
-    width: 35vw;
-    height: 5vh;
+    width: 35svw;
+    height: 5svh;
     border-radius: 10px;
     border: solid black 2px;
     display: flex;
@@ -11,8 +11,8 @@
 
 .input {
     border: 0;
-    width: 30vw;
-    height: 5vh;
+    width: 30svw;
+    height: 5svh;
     padding: 0;
     background-color: transparent;
 	border: none;
@@ -34,36 +34,36 @@
 
 @media (min-width: 0px) and (max-width: 280px) {
     .searchbar {
-        width: 60vw;
+        width: 60svw;
     }
 }
 
 @media (min-width: 290px) and (max-width: 375px) {
     .searchbar {
-        width: 50vw;
+        width: 50svw;
     }
 }
 
 @media (min-width: 376px) and (max-width: 430px) {
     .searchbar {
-        width: 50vw;
+        width: 50svw;
     }
 }
 
 @media (min-width: 431px) and (max-width: 540px) {
     .searchbar {
-        width: 50vw;
+        width: 50svw;
     }
 }
 
 @media (min-width: 550px) and (max-width: 1024px) {
     .searchbar {
-        width: 50vw;
+        width: 50svw;
     }
 }
 
 @media (min-width: 550px) and (max-width: 1024px) and (height: 600px) {
     .searchbar {
-        width: 50vw;
+        width: 50svw;
     }
 }

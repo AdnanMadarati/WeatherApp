@@ -1,6 +1,6 @@
 .error {
-    width: 40vw;
-    height: 10vh;
+    width: 40svw;
+    height: 10svh;
     font-size: 1.5em;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -13,37 +13,37 @@
 
 @media (min-width: 0px) and (max-width: 280px) {
     .error {
-        width: 80vw;
+        width: 80svw;
         font-size: 1em;
     }
 }
 
 @media (min-width: 290px) and (max-width: 375px) {
     .error {
-        width: 85vw;
+        width: 85svw;
     }
 }
 
 @media (min-width: 376px) and (max-width: 430px) {
     .error {
-        width: 80vw;
+        width: 80svw;
     }
 }
 
 @media (min-width: 431px) and (max-width: 540px) {
     .error {
-        width: 80vw;
+        width: 80svw;
     }
 }
 
 @media (min-width: 550px) and (max-width: 1024px) {
     .error {
-        width: 60vw;
+        width: 60svw;
     }
 }
 
 @media (min-width: 550px) and (max-width: 1024px) and (height: 600px) {
     .error {
-        width: 50vw;
+        width: 50svw;
     }
 }
