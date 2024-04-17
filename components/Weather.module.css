@@ -5,12 +5,13 @@
     margin: auto;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: rgb(172, 115, 136);
+    background-color: transparent;
+    color: rgb(109, 104, 117);
 }
 
 .cardTop {
     width: 100%;
-    height: 37svh;
+    height: 50%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -51,10 +52,9 @@
     border-radius: 10px;
     padding: 1em;
 }
-
 .cardButtom {
     width: 100%;
-    height: 37svh;
+    height: 50%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -63,6 +63,14 @@
 .forecast {
     width: 20%;
     height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.miniForecast {
+    width: 15%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -120,6 +128,12 @@
     .forecastCard {
         height: 80%;
     }
+    .miniForecast {
+        height: 40%;
+    }
+    .miniForecast p {
+        font-size: 8px;
+    }
     .forecast {
         height: 40%;
     }
@@ -128,7 +142,7 @@
 @media (min-width: 290px) and (max-width: 375px) {
     .mainCard {
         width: 80svw;
-        height: 70svh;
+        height: 65svh;
         font-size: 14px;
     }
     .cardTop p:first-child {
@@ -148,6 +162,12 @@
     .forecastCard {
         height: 80%;
     }
+    .miniForecast {
+        height: 40%;
+    }
+    .miniForecast p {
+        font-size: 10px;
+    }
     .forecast {
         height: 50%;
     }
@@ -156,7 +176,7 @@
 @media (min-width: 376px) and (max-width: 430px) {
     .mainCard {
         width: 84svw;
-        height: 70svh;
+        height: 60svh;
         font-size: 14px;
     }
     .cardTop p:first-child {
@@ -175,6 +195,12 @@
     }
     .forecastCard {
         height: 80%;
+    }
+    .miniForecast {
+        height: 37%;
+    }
+    .miniForecast p {
+        font-size: 12px;
     }
     .forecast {
         height: 50%;
@@ -204,6 +230,12 @@
     .forecastCard {
         height: 80%;
     }
+    .miniForecast {
+        height: 48%;
+    }
+    .miniForecast p {
+        font-size: 14px;
+    }
     .forecast {
         height: 65%;
     }
@@ -231,6 +263,12 @@
     }
     .forecastCard {
         height: 80%;
+    }
+    .miniForecast {
+        height: 48%;
+    }
+    .miniForecast p {
+        font-size: 18px;
     }
     .forecast {
         height: 65%;
@@ -261,6 +299,9 @@
         height: 85%;
         justify-content: center;
         align-items: center;
+    }
+    .miniForecast {
+        height: 62%;
     }
     .forecastCard img {
         width: 100px;

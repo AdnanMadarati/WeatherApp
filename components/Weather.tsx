@@ -42,8 +42,21 @@ export const Weather = ({ weather, forecasts, removeWeather }: Props) => {
         </div>
         <hr />
         <div className={styles.cardButtom}>
-          {forecasts.map((forecast, index) => (
+          {forecasts.length === 4 ? forecasts.map((forecast, index) => (
             <div className={styles.forecast} key={`forecast-${index}`}>
+              <div className={styles.forecastCard}>
+                <img
+                  src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`}
+                  alt={forecast.weather[0].description}
+                />
+                <p>{forecast.main.temp}°C</p>
+              </div>
+              <p>{format(parseISO(forecast?.dt_txt), "iii")}</p>
+            </div>
+
+          )) :
+          forecasts.map((forecast, index) => (
+            <div className={styles.miniForecast} key={`forecast-${index}`}>
               <div className={styles.forecastCard}>
                 <img
                   src={`https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`}
